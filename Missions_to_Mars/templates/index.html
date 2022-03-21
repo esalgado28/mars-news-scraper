@@ -12,6 +12,7 @@
 <body>
   <div class="container" style="padding: 20px;">
 
+    <!-- Container with page title and scrape button -->
     <div class="jumbotron text-center">
       <h1><b>Mission to Mars</b></h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
@@ -27,12 +28,14 @@
     </div>
 
     <div class="row">
+        <!-- Featured Image -->
         <div class="col-md-7">
             <h3><b>Featured Mars Image</b></h3>
             <a href="{{ mars_data.featured_img_url }}">
             <img src="{{ mars_data.featured_img_url }}" alt="Featured Image" width="100%"></a>
         </div>
 
+        <!-- Mars facts table -->
         <div class="col-md-5">
             <h3><b>Mars Facts</b></h3>
             <div class="table-responsive">
@@ -42,9 +45,9 @@
     </div>
 
     <h3><b>Mars Hemispheres</b></h3>
-
     <hr>
 
+    <!-- Hemisphere photos -->
     <div class="row">
         <div class="col-md-3">
             <figure>

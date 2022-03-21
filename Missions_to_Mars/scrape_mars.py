@@ -33,11 +33,18 @@ def scrape():
     table_html = df.to_html(classes='table table-striped text-center', justify='center')
 
     # Mars Hemispheres
-    urls = ['https://marshemispheres.com/cerberus.html',
-        'https://marshemispheres.com/schiaparelli.html',
-        'https://marshemispheres.com/syrtis.html',
-        'https://marshemispheres.com/valles.html']
+    url = 'https://marshemispheres.com'
+    browser.visit(url)
+    soup = bs(browser.html, 'html.parser')
+    results = soup.find_all('a', 'itemLink product-item')
 
+    urls = []
+
+    for res in results:
+        link = url + '/' + res['href']
+        if (res['href'] != '#') & (link not in urls):
+            urls.append(link)
+            
     hemisphere_image_urls = []
 
     for url in urls:
