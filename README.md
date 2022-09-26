@@ -1,6 +1,9 @@
 # Mission to Mars
 Eddy's folder for web scraping homework.
 
+![image](https://user-images.githubusercontent.com/95975931/192191283-504167eb-53fb-430e-8a77-f36b0d094b3a.png)
+
+
 ## Background
 In this assignment, I build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following sites are scraped:
 - [Mars News Site](https://redplanetscience.com/)
